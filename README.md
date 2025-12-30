@@ -2,7 +2,7 @@
 
 A fine-tuned FLAN-T5-Base model that emulates George Soros's investment philosophy, providing financial insights and advisory responses in his distinctive analytical style.
 
-[![View on HuggingFace](https://img.shields.io/badge/View%20on%20%F0%9F%A4%97%20Hugging%20Face-ffc107?style=flat&color=ffc107&logoColor=white)](https://huggingface.co/coffeewithyogurt/soros-advisor)
+[![View on HuggingFace](https://img.shields.io/badge/View%20on%20%F0%9F%A4%97%20Hugging%20Face-ffc107?style=flat&color=ffc107&logoColor=white)](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
 
 ## Model Details
 
