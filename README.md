@@ -2,6 +2,8 @@
 
 A fine-tuned FLAN-T5-Base model that emulates George Soros's investment philosophy, providing financial insights and advisory responses in his distinctive analytical style.
 
+**The model and the source code are hosted on HuggingFace**
+
 [![View on HuggingFace](https://img.shields.io/badge/View%20on%20%F0%9F%A4%97%20Hugging%20Face-ffc107?style=flat&color=ffc107&logoColor=white)](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
 
 ## Model Details
@@ -25,15 +27,15 @@ SorosAdvisor is a sequence-to-sequence model fine-tuned on a curated dataset of 
 ### Direct Use
 
 The model can be used directly for:
-- Generating investment philosophy insights in the style of George Soros
+- Generating investment philosophy insights in the style of George Soros *(For educational purposes only)*
 - Educational purposes to understand Soros's trading psychology and principles
-- Exploring concepts like reflexivity, risk management, and market psychology
+- Exploring concepts like reflexivity, risk management, and market psychology *(For educational purposes only)*
 - Research on financial NLP and domain-specific fine-tuning
 
 ### Downstream Use
 
-- Integration into financial education platforms
-- Chatbot backends for investment philosophy discussions
+- Integration into financial education platforms *(Refer Out-of-Scope use below)*
+- Chatbot backends for investment philosophy discussions *(Refer Out-of-Scope use below)*
 - Research tools for studying investment strategies
 
 ### Out-of-Scope Use
