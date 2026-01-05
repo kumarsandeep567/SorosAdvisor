@@ -19,7 +19,7 @@ SorosAdvisor is a sequence-to-sequence model fine-tuned on a curated dataset of 
 
 ### Model Sources
 
-- **Repository:** [GitHub - SorosAdvisor](https://github.com/kumarsandeep567/SorosAdvisor)
+- **Repository:** [HuggingFace - SorosAdvisor](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
 - **Base Model:** [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
 
 ## Uses
