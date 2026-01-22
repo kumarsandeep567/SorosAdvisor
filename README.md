@@ -2,9 +2,9 @@
 
 A fine-tuned FLAN-T5-Base model that emulates George Soros's investment philosophy, providing financial insights and advisory responses in his distinctive analytical style.
 
-**The model and the source code are hosted on HuggingFace**
+**The model and the source code are hosted on Hugging Face**
 
-[![View on HuggingFace](https://img.shields.io/badge/View%20on%20%F0%9F%A4%97%20Hugging%20Face-ffc107?style=flat&color=ffc107&logoColor=white)](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
+[![View on Hugging Face](https://img.shields.io/badge/View%20on%20%F0%9F%A4%97%20Hugging%20Face-ffc107?style=flat&color=ffc107&logoColor=white)](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
 
 ## Model Details
 
@@ -19,7 +19,7 @@ SorosAdvisor is a sequence-to-sequence model fine-tuned on a curated dataset of 
 
 ### Model Sources
 
-- **Repository:** [HuggingFace - SorosAdvisor](https://huggingface.co/coffeewithyogurt/SorosAdvisor)
+- **Repository:** [GitHub - SorosAdvisor](https://github.com/kumarsandeep567/SorosAdvisor)
 - **Base Model:** [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
 
 ## Uses
@@ -254,21 +254,25 @@ The model is evaluated using **ROUGE scores**, which measure the overlap between
 
 | Metric | Description |
 |--------|-------------|
-| **ROUGE-1** | Unigram overlap |
-| **ROUGE-2** | Bigram overlap |
-| **ROUGE-L** | Longest common subsequence |
+| **ROUGE-1** | Unigram overlap (measures surface-level lexical match) |
+| **ROUGE-2** | Bigram overlap (measures phrase-level match) |
+| **ROUGE-L** | Longest common subsequence (measures sentence structure preservation) |
 | **ROUGE-Lsum** | Summary-level ROUGE-L |
+| **METEOR** | Semantic alignment (accounts for synonyms and paraphrasing) |
+| **BERTScore** | Semantic similarity using contextual embeddings (F1 Score) |
 
 ### Results
 
-*Results will vary based on training run. Check Weights & Biases logs for specific run metrics.*
+*Metrics derived from the final evaluation step of the Full Fine-Tuned run*
 
 | Metric | Score |
 |--------|-------|
-| **ROUGE-1** | TBD |
-| **ROUGE-2** | TBD |
-| **ROUGE-L** | TBD |
-| **ROUGE-Lsum** | TBD |
+| **ROUGE-1** | **~34.0** |
+| **ROUGE-2** | **~14.5** |
+| **ROUGE-L** | **~29.5** |
+| **ROUGE-Lsum** | **~31.0** |
+| **METEOR** | **~30.2** |
+| **BERTScore (F1)**| **89.4** |
 
 ## Technical Specifications
 
@@ -302,6 +306,31 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
 - **Compute Region:** Varies
 - **Carbon Emitted:** Estimated based on hardware and duration
 
+## More Information
+
+### Project Structure
+
+- The Hugging Face repo contains 2 implementations of fine-tuning (Full-FineTuned, LoRA-FineTuned), and 1 implementation of Vanilla Transformer (implementation of Attention-is-all-you-need paper)
+
+```
+SorosAdvisor/
+├── Full-FineTuned/
+│   └── (remaining files)
+├── LoRA-FineTuned/
+│   └── (remaining files)
+├── Vanilla-Transformer
+    └── (remaining files)
+```
+
+### Example Questions
+
+The model can answer questions like:
+- "How does Soros apply self-awareness to his trading decisions?"
+- "What is the theory of reflexivity and how does it apply to markets?"
+- "How does Soros manage risk in volatile markets?"
+- "What role does psychology play in Soros's investment approach?"
+
+
 ## Citation
 
 **BibTeX:**
@@ -313,36 +342,17 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
   publisher = {Hugging Face},
   howpublished = {\url{https://huggingface.co/coffeewithyogurt/soros-advisor}}
 }
+@article{2020t5,
+  author  = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+  title   = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {140},
+  pages   = {1-67},
+  url     = {http://jmlr.org/papers/v21/20-074.html}
+}
 ```
-
-## Glossary
-
-| Term | Definition |
-|------|------------|
-| **Reflexivity** | Soros's theory that market participants' biased views can influence market fundamentals, creating feedback loops |
-| **ROUGE** | Recall-Oriented Understudy for Gisting Evaluation - metrics for evaluating text generation |
-| **Seq2Seq** | Sequence-to-Sequence - model architecture that transforms input sequences to output sequences |
-| **FLAN-T5** | Fine-tuned Language Net T5 - Google's instruction-tuned version of T5 |
-
-## More Information
-
-### Project Structure
-
-```
-SorosAdvisor/
-├── FullFull-FineTuned/
-│   └── (remaining files)
-└── LoRA-FineTuned/
-    └── (remaining files)
-```
-
-### Example Questions
-
-The model can answer questions like:
-- "How does Soros apply self-awareness to his trading decisions?"
-- "What is the theory of reflexivity and how does it apply to markets?"
-- "How does Soros manage risk in volatile markets?"
-- "What role does psychology play in Soros's investment approach?"
 
 
 ## Contact
